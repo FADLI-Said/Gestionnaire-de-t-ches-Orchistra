@@ -21,7 +21,7 @@
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#supprimer">Supprimer</button>
         <a href="../Controller/controller-modif.php?profile=<?= $_SESSION["user_id"] ?>">Modification</a>
         <a href="../Controller/controller-general.php">Home</a>
-        <a href="../Controller/controller-add_tache.php">Ajouter tâche</a>
+        <a href="../Controller/controller-add_tache.php?user=<?= $_SESSION["user_id"] ?>">Ajouter tâche</a>
     </div>
 
 
