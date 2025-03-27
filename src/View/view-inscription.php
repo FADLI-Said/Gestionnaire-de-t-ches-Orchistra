@@ -9,7 +9,7 @@ include_once "../../template/head.php";
     ?>
 
 <div id="retour">
-    <a href="../Controller/controller-connexion.php">Retour</a>
+    <a href="../Controller/controller-connexion.php"><i class="fa-solid fa-arrow-left"></i> Retour</a>
 </div>
 
     <form action="" method="post" novalidate>
