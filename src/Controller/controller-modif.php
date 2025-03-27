@@ -46,8 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        $sql = "UPDATE 76_users SET user_nom = :nom, user_prenom = :prenom, user_mail = :mail, user_date_naissance = :date_naissance WHERE user_id = :id";
+        $sql = "UPDATE 76_users SET user_nom = :nom, user_prenom = :prenom, user_mail = :mail, user_date_naissance = :date_naissance, user_avatar = :avatar WHERE user_id = :id";
         $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":avatar", $filename, PDO::PARAM_STR);
         $stmt->bindValue(":nom", $_POST['nom'], PDO::PARAM_STR);
         $stmt->bindValue(":prenom", $_POST['prenom'], PDO::PARAM_STR);
         $stmt->bindValue(":mail", $_POST['mail'], PDO::PARAM_STR);

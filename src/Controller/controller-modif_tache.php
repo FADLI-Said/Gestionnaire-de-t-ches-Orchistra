@@ -48,10 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($errors)) {
         $sql = "UPDATE 76_taches SET tache_titre = :titre, tache_description = :description, tache_jour = :jour, tache_timestamp_debut = :debut, tache_timestamp_fin = :fin, tache_statut = :statut, propriete_id = :propri, categorie_id = :categorie WHERE tache_id = :tache_id";
+        $date = new DateTimeImmutable($_POST['jour']);
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(":titre", $_POST['titre'], PDO::PARAM_STR);
         $stmt->bindValue(":description", $_POST['description'], PDO::PARAM_STR);
-        $stmt->bindValue(":jour", $_POST['jour'], PDO::PARAM_STR);
+        $stmt->bindValue(":jour", $date->format('d/m/Y'), PDO::PARAM_STR);
         $stmt->bindValue(":debut", $_POST['debut'], PDO::PARAM_STR);
         $stmt->bindValue(":fin", $_POST['fin'], PDO::PARAM_STR);
         $stmt->bindValue(":statut", $_POST['statut'], PDO::PARAM_STR);
@@ -60,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindValue(":tache_id", $_GET['tache'], PDO::PARAM_INT);
         $stmt->execute();
 
+        var_dump($stmt->errorInfo());
         header('Location: controller-general.php');
         exit;
     }

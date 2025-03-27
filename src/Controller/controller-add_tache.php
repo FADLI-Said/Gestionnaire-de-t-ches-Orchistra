@@ -70,6 +70,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-var_dump($_POST);
-
 require_once "../View/view-add_tache.php";

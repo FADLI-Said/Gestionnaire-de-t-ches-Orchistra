@@ -9,19 +9,24 @@
 </head>
 
 <body>
-    <div>
-        <h1>Profil</h1>
-        <img src="../../assets/images/users/<?= $_SESSION["user_id"] ?>/avatar/<?= $_SESSION["user_avatar"] ?>" alt="Image de profil" style="width: 10rem; height: 10rem;">
+    <div class="container text-center">
+        <div>
+            <img class="mt-5 border border-4 rounded" src="../../assets/images/users/<?= $_SESSION["user_id"] ?>/avatar/<?= $_SESSION["user_avatar"] ?>" alt="Image de profil" style="width: 10rem;">
+        </div>
         <br>
-        <p class="text-capitalize">Bonjour <?= $_SESSION["user_prenom"] ?> <?= $_SESSION["user_nom"] ?></p>
+        <p class="text-capitalize h1">Bonjour <?= $_SESSION["user_prenom"] ?> <?= $_SESSION["user_nom"] ?></p>
         <p>Adresse mail: <?= $_SESSION["user_mail"] ?></p>
         <p>Date de naissance: <?= $date->format("d/m/Y") ?></p>
         <p>Compte créer le <?= date("d/m/Y H:i:s", $_SESSION["user_timestamp_creation"] + 3600) ?></p>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deconnexion">Déconnexion</button>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#supprimer">Supprimer</button>
-        <a href="../Controller/controller-modif.php?profile=<?= $_SESSION["user_id"] ?>">Modification</a>
-        <a href="../Controller/controller-general.php">Home</a>
-        <a href="../Controller/controller-add_tache.php?user=<?= $_SESSION["user_id"] ?>">Ajouter tâche</a>
+        <div class="mb-5">
+            <a class="btn btn-dark" href="../Controller/controller-add_tache.php?user=<?= $_SESSION["user_id"] ?>">Ajouter tâche</a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deconnexion">Déconnexion</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#supprimer">Supprimer</button>
+        </div>
+        <div class="gap-3 row justify-content-center mt-5">
+            <a class="btn btn-dark col-6" href="../Controller/controller-modif.php?profile=<?= $_SESSION["user_id"] ?>">Modifier le profile</a>
+            <a class="btn btn-dark col-6" href="../Controller/controller-general.php">Home</a>
+        </div>
     </div>
 
 
