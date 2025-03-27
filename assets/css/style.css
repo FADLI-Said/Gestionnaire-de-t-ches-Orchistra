@@ -97,10 +97,12 @@ footer {
 	position: fixed;
 	bottom: 0;
 	height: 100px;
+	padding: 10px;
 	background: #b22222;
 	border-radius: 15px 15px 0 0;
 	width: 25%;
-	right: 18px;
+	right: 5px;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 footer p {
@@ -146,6 +148,7 @@ input {
 	padding: 10px;
 	margin-top: 10px;
 	border: 2px solid transparent;
+	color: #FAF3E0;
 }
 
 label {

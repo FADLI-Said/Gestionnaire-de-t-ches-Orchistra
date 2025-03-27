@@ -8,7 +8,10 @@ include_once "../../template/head.php";
     include_once "../../template/navbar.php";
     ?>
 
-    <h1>Orchistra</h1>
+<div id="retour">
+    <a href="../Controller/controller-connexion.php">Retour</a>
+</div>
+
     <form action="" method="post" novalidate>
         <div id="nom">
             <label for="lastname"><i class="fa-solid fa-user-tie"></i> Nom</label>
@@ -50,9 +53,6 @@ include_once "../../template/head.php";
         </div>
     </form>
 
-    <div id="retour">
-        <a href="../Controller/controller-connexion.php">Retour</a>
-    </div>
 
     <?php
     include_once "../../template/footer.php";
