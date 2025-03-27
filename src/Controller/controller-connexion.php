@@ -4,6 +4,11 @@ session_start();
 
 require_once "../../config.php";
 
+if (isset($_SESSION["user_id"])) {
+    header("Location: controller-profile.php");
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["id"])) {
         if (empty($_POST["id"])) {

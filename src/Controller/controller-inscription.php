@@ -1,10 +1,17 @@
 <?php
-
+session_start();
 require_once "../../config.php";
+
+
 
 $regex_name = "/^[a-zA-ZÀ-ú]+$/";
 $regex_password = "/^[a-zA-Z0-9]+$/";
 $regex_date = "/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/";
+
+if (isset($_SESSION["user_id"])) {
+    header("Location: controller-profile.php");
+    exit;
+}
 
 $error = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orchistra</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+<?php
+include_once "../../template/head.php";
+?>
 
 <body class="container">
+    <?php
+    include_once "../../template/navbar.php";
+    ?>
+
+    <div id="retour">
+        <a href="../Controller/controller-general.php"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    </div>
+
     <div class="d-flex mt-5 gap-2">
         <img class="border border-4 rounded" src="../../assets/images/users/<?= $_SESSION["user_id"] ?>/avatar/<?= $_SESSION["user_avatar"] ?>" alt="Image de profil" style="width: 30rem;">
         <div>
@@ -28,6 +30,10 @@
             </div>
         </div>
     </div>
+
+    <?php
+    include_once "../../template/footer.php";
+    ?>
 </body>
 
 </html>
