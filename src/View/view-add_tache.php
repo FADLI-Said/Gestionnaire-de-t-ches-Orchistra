@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orchistra</title>
-</head>
+<?php
+include_once "../../template/head.php";
+?>
 
 <body>
+
+    <?php
+    include_once "../../template/navbar.php";
+    ?>
+
     <h1>Ajouter une tâche</h1>
     <form action="" novalidate method="post">
         <div id="titre">
@@ -67,7 +67,10 @@
         </div>
     </form>
 
-    <script src="https://kit.fontawesome.com/50a1934b21.js" crossorigin="anonymous"></script>
+    <?php
+    include_once "../../template/footer.php";
+    ?>
+    
 </body>
 
 </html>

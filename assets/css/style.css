@@ -1,0 +1,111 @@
+/* Général */
+body {
+	font-family: "Poppins", system-ui;
+	margin: 0;
+	padding: 0;
+	background-color: #FAF3E0;
+}
+
+/* Logo */
+#logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Bar de navigation */
+#menu-toggle {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background-color: #1C1C1C;
+	border-radius: 10px 10px 10px 10px;
+	position: fixed;
+	top: 20px;
+	right: 28%;
+	z-index: 2;
+}
+
+#menu-toggle .before-icon,
+#menu-toggle .after-icon {
+	color: #FAF3E0;
+	font-size: 20px;
+}
+
+#menu-toggle:checked + nav {
+	transform: translateX(0);
+}
+
+nav {
+	width: 250px;
+	height: 28vh;
+	border-radius: 15px 0 0 15px;
+	background-color: #1C1C1C;
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+	z-index: 3;
+}
+
+nav.open {
+    transform: translateX(0);
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li {
+	margin: 15px 0;
+}
+
+nav ul li a {
+	font-family: "Poppins", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	color: #FAF3E0;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background-color: #DAA520;
+	color: #1C1C1C;
+	transition: 0.3s;
+}
+
+/* view-connexion.php */
+
+/* formulaire */
+
+form  {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10%;
+}
+
+form button {
+	background-color: #1C1C1C;
+	color: #FAF3E0;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}

@@ -1,12 +1,20 @@
 <?php
-session_start();
+include_once "../../template/head.php";
+?>
 
-require_once "../../config.php";
-if (!isset($_SESSION['user_id'])) {
-    // on renvoie vers la page d'accueil
-    header('Location: ../../public/');
-    exit;
-}
+<body>
 
+    <?php
+    include_once "../../template/navbar.php";
+    ?>
 
-require_once "../Controller/controller-general.php";
+    <h1>
+        Général
+    </h1>
+
+    <?php
+    include_once "../../template/footer.php";
+    ?>
+    
+</body>
+</html>

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orchistra</title>
-</head>
+<?php
+include_once "../../template/head.php";
+?>
 
 <body>
+
+    <?php
+    include_once "../../template/navbar.php";
+    ?>
+
     <h1 class="text-center">Modification du profil</h1>
     <form action="" method="POST" class="col-lg-6 mx-auto p-2" enctype="multipart/form-data" novalidate>
         <div class="mb-3">
@@ -43,6 +43,11 @@
         </div>
     </form>
     <a href="../Controller/controller-profile.php">Retour</a>
+
+    <?php
+    include_once "../../template/footer.php";
+    ?>
+    
 </body>
 
 </html>
