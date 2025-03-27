@@ -41,7 +41,7 @@ body {
 
 nav {
 	width: 250px;
-	height: 28vh;
+	height: 75vh;
 	border-radius: 15px 0 0 15px;
 	background-color: #1C1C1C;
 	position: fixed;
@@ -50,6 +50,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+	padding-top: 0;
 	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 	transform: translateX(100%);
 	transition: transform 0.3s ease;
@@ -88,6 +89,44 @@ nav ul li a:focus {
 	transition: 0.3s;
 }
 
+/* footer.php */
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	background: #b22222;
+	border-radius: 15px 15px 0 0;
+	width: 25%;
+	right: 18px;
+}
+
+footer p {
+	color: #FAF3E0;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+footer a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	color: #FAF3E0;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #1C1C1C;
+	transition: 0.3s;
+	border-radius: 5px;
+}
+
+
 /* view-connexion.php */
 
 /* formulaire */
@@ -100,7 +139,28 @@ form  {
 	margin-top: 10%;
 }
 
+input {
+	font-family: "Poppins", system-ui;
+	background-color: #1C1C1C;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	border: 2px solid transparent;
+}
+
+label {
+	padding: 10px;
+	margin: 0;
+}
+
+input:focus,
+input:active {
+	border: 3px solid #DAA520;
+	outline: none;
+}
+
 form button {
+	font-family: "Poppins", system-ui;
 	background-color: #1C1C1C;
 	color: #FAF3E0;
 	border: none;
@@ -108,4 +168,26 @@ form button {
 	padding: 10px;
 	margin-top: 10px;
 	cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+	background-color: #DAA520;
+	color: #1C1C1C;
+	transition: 0.3s;
+}
+
+a {
+	color: #1C1C1C;
+	text-decoration: none;
+	margin-top: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+a:hover,
+a:focus {
+	background-color: #DAA520;
+	transition: 0.3s;
+	border-radius: 5px;
 }
